@@ -2,7 +2,7 @@
 
 ## Instructions
 
-- If you need a starting point, fork and clone [this repository](https://github.com/JoinCODED/Task-Flutter-CRUD-AdoptApp/tree/main) to your `Development` folder.
+- If you need a starting point, fork and clone [this repository](https://github.com/JoinCODED/Task-Flutter-Auth-AdoptApp-Signup) to your `Development` folder.
 
 ## Steps
 
