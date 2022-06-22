@@ -69,10 +69,6 @@ flutter pub run build_runner build
 
 9. In your `providers` folder create a file called `auth_provider.dart`.
 10. Add 2 properties for now, a `String` `token` and initialize it with an empty string, and a `User` `user` property and mark it as `late`.
-
-11. In your `services` folder, create a new file `client.dart`.
-12. Initialize a dio instance, pass it the base url and create a singleton for it.
-13. Replace every `PetsServices()` in `services/pets.dart` with the singleton you just created.
 14. In your `services` folder, create a new file `auth_services.dart`.
 15. Create your `signup` function that returns a future String and takes `user` as an argument.
 16. Send a post request to `/signup` and pass the `user` argument using `.toJson` constructor.
