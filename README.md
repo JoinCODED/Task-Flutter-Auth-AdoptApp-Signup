@@ -82,10 +82,47 @@ flutter pub run build_runner build
 
 ### Signup
 
-1. In your `pages` folder, create a signup page with two field, username and password.
+1. In your `pages` folder, create a signup page and paste this code
+```dart
+class SignupPage extends StatelessWidget {
+  SignupPage({Key? key}) : super(key: key);
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sign up"),
+      ),
+      resizeToAvoidBottomInset: false,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            const Text("Sign Up"),
+            TextField(
+              decoration: const InputDecoration(hintText: 'Username'),
+              controller: usernameController,
+            ),
+            TextField(
+              decoration: const InputDecoration(hintText: 'Password'),
+              controller: passwordController,
+              obscureText: true,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Sign Up"),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
 2. Add this page into your routes in `main.dart`.
-3. In your `home_page.dart` create a `Drawer` widget with a header, signup and signin buttons.
+3. In your `home_page.dart` create a `Drawer` widget with a signup button.
 4. In your signup button, link it to the `signup` page.
 5. In `main.dart` change `ChangeNotifierProvider` with `MultiProvider` that takes `providers` array as an argument and add your two providers.
-6. In your Signup page, call the auth provider signup function, and pass it the text fields values, then pop the user to the `home_page` again.
+6. In your Signup page, call the signup function, and pass it the text fields values, then pop the user to the `home_page` again.
 7. Check your code, you should see the token in the console.
